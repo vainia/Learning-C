@@ -1,0 +1,34 @@
+http://cygnus.tele.pw.edu.pl/olek/doc/np/spis.htm
+
+
+IN putty:
+cd ~
+ln -s /opt/windows/staff/sdcc sdcc
+
+
+Tera Term Pro Config
+Setup -> Serial Port
+COM1
+19200
+8
+none
+1
+none
+0ms/char, 20ms/line
+Setup -> Save setup
+
+
+main.c file located in: sdcc/source
+move main.c to n: IN cmd
+
+
+IN cmd:
+sdcc -c main.c
+sdcc --model-small --code-loc 0x4000 --xram-loc 0x0000 main.rel
+packihx main.ihx > main.hex
+copyclip main.hex
+
+
+IN Tera Term Pro:
+q
+EDIT->PASTE

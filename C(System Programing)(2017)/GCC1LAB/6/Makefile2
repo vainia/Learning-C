@@ -1,0 +1,16 @@
+SRC_FILES=main.c func.c
+OBJ_FILES=main.o func.o
+
+CFLAGS=-Wall
+LDFLAGS=
+
+zad1:	$(OBJ_FILES)
+	gcc $(LDFLAGS) -o $@ $(OBJ_FILES)
+
+%.o:%.c
+	gcc $(CFLAGS) -c $<		 
+
+clean:
+	rm *.o zad1
+
+

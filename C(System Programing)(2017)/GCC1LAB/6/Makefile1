@@ -1,0 +1,9 @@
+zad1:	main.o func.o
+	gcc -o zad1 main.o func.o
+
+main.o: main.c func.h
+	gcc -c -Wall 	main.c
+
+func.o: func.c func.h
+	gcc -c -Wall func.c
+

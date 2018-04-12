@@ -1,0 +1,19 @@
+SRC_FILES=initapi.c randapi.c test.c
+OBJ_FILES_TOLIB=initapi.o randapi.o
+MAIN_FILE=test.o
+
+CFLAGS=-Wall
+LDFLAGS=-L./lib -lrapi
+
+zad2:	$(MAIN_FILE) librapi.a
+	gcc -o $@ $(MAIN_FILE) $(LDFLAGS)
+
+librapi.a: $(OBJ_FILES_TOLIB)
+	mkdir -p lib
+	ar cr lib/$@ $(OBJ_FILES_TOLIB)
+
+%.o:%.c
+	gcc $(CFLAGS) -c $<
+
+clean:
+	rm -rf lib *.o zad2

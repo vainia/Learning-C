@@ -1,0 +1,21 @@
+http://cygnus.tele.pw.edu.pl/olek/doc/np/skrypty/fosc.htm
+
+TMOD &= 0x0F;
+TMOD |= 0x20;
+
+19200 bps
+20ms/line 
+
+separator nie moze byc spacja
+
+1) Napisz program, który przechwyci dane z portu szeregowego, traktuj¹c pierwsze znaki jako pierwszy argument w formacie HEX, po czym otrzyma spacje oraz kolejne znaki potraktuje jako drugi argument w formacie HEX, po czym ponowie otrzyma spacje oraz kolejne znaki potraktuje jako trzeci argument w formacie HEX. Po odebraniu znaku kolejnej spacji wykona operacje: arg1 + arg2 - arg3, wynik tych operacji odeœle do PC w formacie DEC. Przyjmij ¿e ka¿dy z argumentów to maksymalnie cztery znaki ASCII, za³ó¿ ¿e po wykonaniu operacji jej rezultat uda zapisaæ siê na czterech znakach.
+
+
+[_ _ _ _] [_ _ _ _] [_ _ _ _] = 3 * 4 byte - input max size
+
+[_ _ _ _] = 1 byte - output max size
+
+alam ako ta 
+HEX HEX HEX 
+HEX+HEX-HEX
+

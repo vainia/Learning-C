@@ -1,0 +1,28 @@
+ service xinetd restart
+ 
+ ipconfig
+ 
+ telnet
+ 
+ host
+ 
+ ping
+ 
+ netstat
+ 
+ cat /etc/services
+ 
+ cd xinetd.d
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  https://korzen.org/wsisiz/programowanie%20aplikacji%20klient-serwer/cw1/

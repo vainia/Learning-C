@@ -1,0 +1,15 @@
+ ipconfig
+ 
+ telnet
+ 
+ host $(adres)
+ 
+ ping
+ 
+ netstat -l
+ 
+ cat /etc/services
+ 
+ cd /etc/xinetd.d
+
+ service xinetd restart
